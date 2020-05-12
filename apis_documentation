@@ -1,0 +1,83 @@
+Url: http://localhost:3000/api/wallet
+
+ADD:
+===
+Method: POST 
+Parameters:
+    {
+        "date": "2010-05-12",
+        "type":"income",
+        "description":"income_four",
+        "amount":5000
+    }
+Output:
+    {
+    "state": "SUCCESS",
+    "message": "Added successfully"
+    }
+
+UPDATE:
+======
+Method: PUT 
+Parameters:
+    {
+        "sNo":4,
+        "date": "2010-05-12",
+        "type":"income",
+        "description":"income_four",
+        "amount":5000
+    }
+Output:
+    {
+    "state": "SUCCESS",
+    "message": "updated successfully"
+    }
+
+DELETE:
+======
+Method: DELETE 
+Parameters:
+    {
+        "sNo":4
+    }
+Output:
+{
+    "state": "SUCCESS",
+    "message": "deleted successfully"
+}
+
+LIST:
+====
+Method: GET 
+Parameters:
+    {}
+Output:
+{
+    "state": "SUCCESS",
+    "message": "Got list of records successfully",
+    "result": {
+        "wallet": [
+            {
+                "sNo": 1,
+                "date": "",
+                "type": "income",
+                "description": "income_one",
+                "amount": 5000
+            },
+            {
+                "sNo": 3,
+                "date": "",
+                "type": "expense",
+                "description": "expense_one",
+                "amount": 5000
+            },
+            {
+                "sNo": 4,
+                "date": "",
+                "type": "income",
+                "description": "income_four",
+                "amount": 5000
+            }
+        ]
+    }
+}
